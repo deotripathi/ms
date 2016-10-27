@@ -49,7 +49,22 @@ environments {
 	}
 	production {
 		dataSource {
-			url = "jdbc:mysql://localhost:3306/openboxes?autoReconnect=true&zeroDateTimeBehavior=convertToNull&sessionVariables=storage_engine=InnoDB"
+			url = "jdbc:mysql://mysql-broker.local.pcfdev.io:3306/cf_8f414d1d_0818_4297_88a5_b366dcca694b?autoReconnect=true&zeroDateTimeBehavior=convertToNull&sessionVariables=storage_engine=InnoDB"
+			dialect = org.hibernate.dialect.MySQLInnoDBDialect
+      		driverClassName = "com.mysql.jdbc.Driver"
+			username = "AAufwmxd4UBEn8Jr"	
+			password = "8yhcfn2Rew5ozy2d"
+
+			// uri = new URI(System.env.DATABASE_URL ?: "mysql://foo:bar@localhost")
+   //  		username = uri.userInfo ? uri.userInfo.split(":")[0] : ""
+   //  		password = uri.userInfo ? uri.userInfo.split(":")[1] : ""
+		 //    url = "jdbc:mysql://" + uri.host + uri.path
+
+		 //    properties {
+		 //        dbProperties {
+		 //            autoReconnect = true
+		 //        }
+		 //    }
 		}
 	}
 	staging {
@@ -78,3 +93,4 @@ environments {
     }
 
 }
+
