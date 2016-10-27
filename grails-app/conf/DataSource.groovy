@@ -12,8 +12,8 @@ dataSource {
 	pooled = true
 	driverClassName = "com.mysql.jdbc.Driver"
 	dialect = org.hibernate.dialect.MySQL5InnoDBDialect
-	username = "root"
-	password = "root"
+	// username = "root"
+	// password = "root"
     loggingSql = false
 	format_sql = false
 	use_sql_comments = false
@@ -34,10 +34,12 @@ environments {
 	development {
 		dataSource {	
 			//dbCreate = "update"
-			url = "jdbc:mysql://localhost:3306/openboxes_dev?autoReconnect=true&zeroDateTimeBehavior=convertToNull&sessionVariables=storage_engine=InnoDB"
+			url = "jdbc:mysql://localhost:3306/openboxes?autoReconnect=true&zeroDateTimeBehavior=convertToNull&sessionVariables=storage_engine=InnoDB"
 			loggingSql = false
 			format_sql = false
 			use_sql_comments = false
+			username = "openboxes"
+			password = "openboxes"
 		}
 	}
 	test {

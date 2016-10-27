@@ -17,13 +17,13 @@ import org.pih.warehouse.log4j.net.DynamicSubjectSMTPAppender
 
 // Locations to search for config files that get merged into the main config
 // config files can either be Java properties files or ConfigSlurper scripts
-grails.config.locations = [ 
-	"classpath:${appName}-config.properties",
-	"classpath:${appName}-config.groovy",
-	"file:${userHome}/.grails/${appName}-config.properties",
-	"file:${userHome}/.grails/${appName}-config.groovy"
-]
-println "Using configuration locations ${grails.config.locations} [${GrailsUtil.environment}]"
+// grails.config.locations = [ 
+// 	"classpath:${appName}-config.properties",
+// 	"classpath:${appName}-config.groovy",
+// 	"file:${userHome}/.grails/${appName}-config.properties",
+// 	"file:${userHome}/.grails/${appName}-config.groovy"
+// ]
+// println "Using configuration locations ${grails.config.locations} [${GrailsUtil.environment}]"
 
 //grails.plugins.reloadConfig.files = []
 //grails.plugins.reloadConfig.includeConfigLocations = true
@@ -40,24 +40,24 @@ grails.exceptionresolver.params.exclude = ['password', 'passwordConfirm']
 // }
 
 // Default mail settings
-grails {
-	mail { 		
-		// By default we enable email.  You can enable/disable email using environment settings below or in your 
-		// ${user.home}/openboxes-config.properties file 
-		enabled = true			
-		from = "info@openboxes.com"
-		prefix = "[OpenBoxes]" + "["+GrailsUtil.environment+"]"
-		host = "localhost"
-		port = "25"
+// grails {
+// 	mail { 		
+// 		// By default we enable email.  You can enable/disable email using environment settings below or in your 
+// 		// ${user.home}/openboxes-config.properties file 
+// 		enabled = true			
+// 		from = "info@openboxes.com"
+// 		prefix = "[OpenBoxes]" + "["+GrailsUtil.environment+"]"
+// 		host = "localhost"
+// 		port = "25"
 
-        // Authentication disabled by default
-		username = null
-		password = null
+//         // Authentication disabled by default
+// 		username = null
+// 		password = null
 
-        // Disable debug mode by default
-        debug = false
-	}
-}
+//         // Disable debug mode by default
+//         debug = false
+// 	}
+// }
 
 /* Indicates which activities are required for a location to allow logins */
 openboxes.chooseLocation.requiredActivities = ["MANAGE_INVENTORY"]
@@ -144,7 +144,7 @@ environments {
 	production {  
 		grails.serverURL = "http://localhost:8080/${appName}"
 		uiperformance.enabled = false
-		grails.mail.enabled = true
+		grails.mail.enabled = false
         grails.mail.prefix = "[OpenBoxes]"
     }
 	staging {  

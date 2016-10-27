@@ -1,0 +1,11 @@
+applications:
+- name: demo
+  instances: 1
+  memory: 1G
+  disk_quota: 512M
+  path: target/openboxes-0.7.11.war
+  buildpack: https://github.com/cloudfoundry/java-buildpack#v2.4
+  routes:
+  - route: demo.local.pcfdev.io
+  services:
+  - openboxes
