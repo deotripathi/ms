@@ -12,11 +12,11 @@ class AssignIdentifierJob {
 	
 	
 	def execute() {
-        identifierService.assignProductIdentifiers()
-        identifierService.assignShipmentIdentifiers()
-        identifierService.assignOrderIdentifiers()
-        identifierService.assignRequisitionIdentifiers()
-        identifierService.assignTransactionIdentifiers()
+        //identifierService.assignProductIdentifiers()
+        //identifierService.assignShipmentIdentifiers()
+        //identifierService.assignOrderIdentifiers()
+        //identifierService.assignRequisitionIdentifiers()
+        //identifierService.assignTransactionIdentifiers()
 	}
 
 
